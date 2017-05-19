@@ -38,7 +38,7 @@ id_permiso int not null
 
 create table permiso
 (
-id_permiso int primary key,
+id_permiso int AUTO_INCREMENT primary key,
 descripcion varchar(30) not null
 );
 alter table usuario_permiso add FOREIGN KEY (num_run_u) REFERENCES usuario(num_run_f); 

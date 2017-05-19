@@ -110,3 +110,7 @@ alter table usuario_permiso add FOREIGN KEY (num_run_u) REFERENCES usuario(num_r
 alter table usuario_permiso add FOREIGN KEY (id_permiso) REFERENCES permiso(id_permiso); 
 alter table usuario add FOREIGN KEY (num_run_f) REFERENCES funcionario(num_run); 
 alter table usuario add FOREIGN key (id_tipo_usuario) REFERENCES tipo_usuario(id_tipo_usuario)
+
+
+
+/*master*/

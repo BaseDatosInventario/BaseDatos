@@ -3,11 +3,11 @@ id_producto int primary key  ,
 nombre varchar (50),
 detalle text,
 stock_min int,
-stock_max int ,
+stock_actual int ,
 valor_venta double,/*valor al que se vende el producto*/
 valor_costo double, /*valor al que se compra al provedor*/
 fecha_ingreso date,
-estado char(2),
+estado char(1),
 id_tipo_producto int 
 
 
@@ -23,7 +23,7 @@ detalle text
 );
 create table Merma(
 id_merma int AUTO_INCREMENT primary key ,
-id_producto int 
+id_producto int, 
 cantidad_product int ,
 costo_perdida double 
 );

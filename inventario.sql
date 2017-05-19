@@ -16,6 +16,7 @@ id_tipo_usuario int primary key,
 descripcion varchar(30)
 );
 
+
 create table usuario
 (
 num_run_f int not null,
@@ -23,7 +24,7 @@ clave varchar(16) not null,
 id_tipo_usuario int not null,
 estado varchar(30) not null
 )
-
+alter table usuario add FOREIGN KEY (num_run_f) REFERENCES funcionario(num_run) 
 
 
 create table usuario_permiso
@@ -31,8 +32,11 @@ create table usuario_permiso
 num_run_u int not null,
 id_permiso int not null, 
 )
+alter table usuario_permiso add FOREIGN KEY (num_run_u) REFERENCES usuario(num_run_f) 
+alter table usuario_permiso add FOREIGN KEY (id_permiso) REFERENCES permiso(id_permiso) 
 
-create table permido
+
+create table permiso
 (
 id_permiso int primary key,
 descripcion varchar(30) not null

@@ -1,6 +1,6 @@
 
-public function test (){
+public function test2 (){
 	
-	echo "esto es de la rama test";
+	echo "esto es la rama de test2";
 
 }
